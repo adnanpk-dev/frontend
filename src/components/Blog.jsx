@@ -9,7 +9,7 @@ export default function Blog() {
   const [error, setError] = useState(null);
 
   useEffect(()=>{
-    axios.get('http://localhost:3001/allpost').then((res)=>{
+    axios.get('adnanpk-blog.up.railway.app/allpost').then((res)=>{
       setBlogs(res.data)
     })
     .catch((err)=>{
