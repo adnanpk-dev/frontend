@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios'
 
 export default function SignUp() {
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -19,7 +20,7 @@ export default function SignUp() {
     try{
       const res = await axios.post('https://adnanpk-blog.up.railway.app/register',formData,{withCredentials: true})
 
-      window.location.href = '/login'
+      navigate('/login')
 
     }catch(err){
       console.log(err)

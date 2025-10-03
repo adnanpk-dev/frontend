@@ -1,8 +1,10 @@
 import axios from "axios";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 
 export default function LoginF() {
+  const navigate = useNavigate()
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -18,7 +20,7 @@ export default function LoginF() {
     try{
       const res = await axios.post('https://adnanpk-blog.up.railway.app/login',formData,{ withCredentials: true })
       
-      window.location.href = '/admin'
+      navigate('/admin')
 
     }catch(err){
       console.log(err)
