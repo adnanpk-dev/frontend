@@ -23,7 +23,7 @@ export default function UpdatePost() {
     e.preventDefault();
 
     try{
-      const res = await axios.post(`http://localhost:3001/update-post/${id}`,formData,{ withCredentials: true })
+      const res = await axios.post(`https://adnanpk-blog.up.railway.app/update-post/${id}`,formData,{ withCredentials: true })
       
     }catch(err){
       console.log(err)

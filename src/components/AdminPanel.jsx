@@ -7,7 +7,7 @@ export default function AdminPanel() {
 
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/ownpost`,{ withCredentials: true }).then((res) => {
+    axios.get(`https://adnanpk-blog.up.railway.app/ownpost`,{ withCredentials: true }).then((res) => {
       setPosts(res.data)
     })
     

@@ -17,7 +17,7 @@ export default function CreatePost() {
     e.preventDefault();
 
     try{
-      const res = await axios.post('http://localhost:3001/create-post',formData,{ withCredentials: true })
+      const res = await axios.post('https://adnanpk-blog.up.railway.app/create-post',formData,{ withCredentials: true })
       
     }catch(err){
       console.log(err)

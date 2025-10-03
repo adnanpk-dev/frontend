@@ -12,7 +12,7 @@ export default function BlogView() {
   const [blog, setBlog] = useState({});
 
   useEffect(()=>{
-    axios.get(`http://localhost:3001/post/${user}/${id}`).then((res)=>{
+    axios.get(`https://adnanpk-blog.up.railway.app/post/${user}/${id}`).then((res)=>{
       setBlog(res.data)
       
     })
@@ -21,23 +21,6 @@ export default function BlogView() {
 
 
 
-
-  const blogs = {
-    title: "Getting Started with React",
-    content: `
-      React is a popular JavaScript library for building user interfaces.
-      It allows developers to create reusable UI components and manage state
-      effectively. In this article, we'll walk through the basics of React,
-      including components, props, and state.
-      
-      React follows a declarative approach, which makes your code more predictable
-      and easier to debug. Whether you're building a small project or a large-scale
-      application, React provides the flexibility you need.
-    `,
-    author: "Adnan",
-    date: "Sep 28, 2025",
-    image: "https://miro.medium.com/v2/resize:fit:1200/0*YxaAcUGlXxnKd7C0.png",
-  };
 
   return (
     <section className="bg-gray-950 text-white py-12">

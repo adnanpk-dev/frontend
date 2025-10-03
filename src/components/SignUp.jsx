@@ -17,7 +17,7 @@ export default function SignUp() {
     e.preventDefault();
 
     try{
-      const res = await axios.post('http://localhost:3001/register',formData)
+      const res = await axios.post('https://adnanpk-blog.up.railway.app/register',formData)
 
       window.location.href = '/login'
 
