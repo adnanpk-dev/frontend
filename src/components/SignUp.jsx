@@ -17,7 +17,7 @@ export default function SignUp() {
     e.preventDefault();
 
     try{
-      const res = await axios.post('https://adnanpk-blog.up.railway.app/register',formData)
+      const res = await axios.post('https://adnanpk-blog.up.railway.app/register',formData,{withCredentials: true})
 
       window.location.href = '/login'
 

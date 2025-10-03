@@ -12,7 +12,7 @@ export default function BlogView() {
   const [blog, setBlog] = useState({});
 
   useEffect(()=>{
-    axios.get(`https://adnanpk-blog.up.railway.app/post/${user}/${id}`).then((res)=>{
+    axios.get(`https://adnanpk-blog.up.railway.app/post/${user}/${id}`,{withCredentials: true}).then((res)=>{
       setBlog(res.data)
       
     })
