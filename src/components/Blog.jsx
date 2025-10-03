@@ -11,6 +11,7 @@ export default function Blog() {
   useEffect(()=>{
     axios.get('https://adnanpk-blog.up.railway.app/allpost').then((res)=>{
       setBlogs(res.data)
+      console.log(res.data)
     })
     .catch((err)=>{
       setError(err.message)
