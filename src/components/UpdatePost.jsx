@@ -35,7 +35,7 @@ export default function UpdatePost() {
 
 
   useEffect(()=>{
-    const res = axios.get(`http://localhost:3001/${id}`).then((res)=>{
+    const res = axios.get(`https://adnanpk-blog.up.railway.app/${id}`).then((res)=>{
         const data = res.data;
         setFormData({
             title: data.title || "",
